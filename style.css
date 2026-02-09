@@ -1,0 +1,742 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Futura', 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.top-bar {
+  background-color: #000;
+  color: #fff;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.top-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+.top-bar a:hover {
+  color: #ccc;
+}
+.location {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.navbar-custom {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+.navbar-custom .logo img {
+  height: 60px;
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.navbar-custom nav {
+  display: flex;
+  gap: 20px;
+}
+.navbar-custom nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navbar-custom nav a:hover {
+  border-bottom: 2px solid #000;
+}
+
+#heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.carousel-item {
+  height: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-overlay {
+  display: none !important; 
+}
+
+.carousel-caption {
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  bottom: auto;
+  right: auto;
+  text-align: center;
+  color: #000;
+  width: 90%;
+  max-width: 600px;
+}
+.carousel-caption h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-shadow: 0px 2px 8px rgba(0,0,0,0.4);
+}
+.carousel-caption p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: 400;
+  text-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 50%;
+  background-size: 40px 40px;
+  transition: background-color 0.3s ease;
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+  .social-icons {
+    gap: 10px;
+    flex: 1;
+  }
+  .location {
+    flex: 1;
+    text-align: center;
+    font-size: 13px;
+  }
+  .navbar-custom {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+  .menu-toggle {
+    display: block;
+    color: #000;
+  }
+  .navbar-custom nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 10px 20px;
+    border-top: 1px solid #eee;
+  }
+  .navbar-custom nav.active {
+    display: flex;
+  }
+  .navbar-custom .logo img {
+    height: 48px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+}
+
+.brand-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.brand-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-text {
+  flex: 1 1 50%;
+  padding: 40px;
+}
+
+.brand-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.brand-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.brand-text .highlight {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.brand-visual {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.brand-visual.animate {
+  animation: bounceIn 1.3s ease-out forwards;
+}
+
+.brand-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.2),
+    0 12px 35px rgba(0, 0, 0, 0.1),
+    0 0 8px rgba(255, 255, 255, 0.05) inset;
+}
+
+.book-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #444;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile fixes with dynamic height */
+@media (max-width: 991px) {
+  .brand-section {
+    padding: 40px 15px;
+  }
+
+  .brand-container {
+    flex-direction: column;
+  }
+
+  .brand-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .brand-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .brand-text p {
+    font-size: 16px;
+  }
+
+  .brand-text .highlight {
+    font-size: 18px;
+  }
+
+  .brand-visual {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    max-height: 40vh;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  .brand-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-section {
+    padding: 0px 15px;
+  }
+
+  .brand-text h2 {
+    font-size: 24px;
+  }
+
+  .brand-text p {
+    font-size: 15px;
+  }
+
+  .brand-visual {
+    aspect-ratio: 16 / 11;
+    max-height: 35vh;
+    margin-top: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* --- Bridal Section --- */
+.bridal-section {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.bridal-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  gap: 30px;
+  min-height: 80vh;
+}
+
+/* Slider column */
+.bridal-slider-wrapper {
+  flex: 1 1 50%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eee;
+  aspect-ratio: 4 / 3; /* Keeps a stable shape */
+  min-height: 480px;
+}
+
+.bridal-image-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bridal-image-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 12px;
+}
+
+.bridal-image-slider img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Content column */
+.bridal-content {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+}
+
+.bridal-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #000;
+}
+
+.bridal-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 26px;
+  max-width: 520px;
+}
+
+.bridal-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color .25s ease, transform .12s ease;
+}
+
+.bridal-btn:hover,
+.bridal-btn:focus {
+  background-color: #222;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 992px) {
+  .bridal-container {
+    flex-direction: column;
+    padding: 40px 16px;
+    min-height: auto;
+  }
+
+  .bridal-slider-wrapper {
+    order: 1;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: auto;
+    border-radius: 10px;
+  }
+
+  .bridal-image-slider img {
+    border-radius: 10px;
+  }
+
+  .bridal-content {
+    order: 2;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 28px 18px;
+    margin-top: 18px;
+  }
+
+  .bridal-content h2 {
+    font-size: 28px;
+  }
+
+  .bridal-content p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .bridal-container {
+    padding: 28px 12px;
+  }
+
+  .bridal-slider-wrapper {
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+  }
+
+  .bridal-content h2 {
+    font-size: 24px;
+  }
+
+  .bridal-content p {
+    font-size: 15px;
+  }
+
+  .bridal-btn {
+    padding: 12px 26px;
+    font-size: 14px;
+  }
+}
+
+/* Fallback if JS is disabled */
+.no-js .bridal-image-slider img {
+  opacity: 0;
+}
+.no-js .bridal-image-slider img:first-child {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* ✅ Hair Section */
+.hair-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; /* vertical center */
+  gap: 40px;
+  padding: 4vw 5vw;
+  background-color: #fdfdfd;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hair-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hair-content h2 {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hair-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+.hair-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: clamp(13px, 2.5vw, 15px);
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.hair-btn:hover {
+  background-color: #444;
+}
+
+.hair-note {
+  display: block;
+  margin-top: 12px;
+  font-size: clamp(12px, 2vw, 14px);
+  color: #888;
+  font-style: italic;
+}
+
+/* ✅ Slider */
+.hair-card-slider {
+  flex: 1;
+  overflow: hidden;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.hair-card-wrapper {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.hair-card {
+  flex: 0 0 50%;
+  padding: 10px;
+}
+
+.hair-card-inner {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hair-card-inner img {
+  width: 100%;
+  height: 100%; /* ✅ Always fill container */
+  object-fit: cover; /* ✅ Crop slightly if needed */
+  display: block;
+}
+
+/* ✅ Card text */
+.hair-card-inner h3 {
+  font-size: clamp(16px, 3vw, 18px);
+  margin: 15px 0 10px;
+}
+
+.hair-card-inner p {
+  font-size: clamp(12px, 2.5vw, 14px);
+  color: #666;
+  padding: 0 12px 15px;
+  line-height: 1.5;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .hair-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 6vw 4vw;
+    gap: 24px; /* reduced gap */
+  }
+
+  .hair-content h2 {
+    font-size: 28px;
+  }
+
+  .hair-content p {
+    font-size: 16px;
+  }
+
+  .hair-card-slider {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .hair-card-wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    transition: none !important;
+    transform: translateX(0%) !important;
+    gap: 12px;
+  }
+
+  .hair-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    margin: 0 auto;
+  }
+
+  .hair-card-inner img {
+    height: 350px; /* ✅ Fixed height for mobile cards */
+    object-fit: cover; /* ✅ Fills completely */
+  }
+}
+
+
+
+
+
+
+
+
